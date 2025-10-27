@@ -1,0 +1,261 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BestLife — Physiotherapy & Wellness</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-lightblue text-gray-800 antialiased leading-relaxed">
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+      <div
+        class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img
+            src="images/logo.png"
+            alt="BestLife Logo"
+            class="w-12 h-12 object-contain rounded-full"
+          />
+
+          <div>
+            <div class="font-semibold text-lg">BestLife</div>
+            <div class="text-xs text-gray-500">Physiotherapy & Wellness</div>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#" class="hover:text-primary">Home</a>
+          <a href="#about" class="hover:text-primary">About Us</a>
+          <a href="#services" class="hover:text-primary">Services</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-3xl focus:outline-none">
+          ☰
+        </button>
+
+        <!-- CTA Button -->
+        <div class="hidden md:block">
+          <button
+            id="bookTop"
+            class="bg-accent text-white px-4 py-2 rounded shadow-sm text-sm hover:brightness-95"
+          >
+            Book Appointment
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Menu -->
+      <nav
+        id="mobileMenu"
+        class="hidden flex-col gap-3 mt-2 bg-white border-t shadow-md p-4 md:hidden"
+      >
+        <a href="#" class="hover:text-primary">Home</a>
+        <a href="#about" class="hover:text-primary">About</a>
+        <a href="#services" class="hover:text-primary">Services</a>
+        <a href="#team" class="hover:text-primary">Therapists</a>
+        <a href="#gallery" class="hover:text-primary">Gallery</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+        <button
+          id="bookTopMobile"
+          class="mt-3 bg-accent text-white px-4 py-2 rounded shadow-sm text-sm hover:brightness-95"
+        >
+          Book Appointment
+        </button>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="max-w-6xl mx-auto px-4 md:px-6 mt-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6 text-center md:text-left">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold text-primary leading-tight"
+          >
+            Improving the Quality of Life<br class="hidden md:block" />Through
+            Therapy
+          </h1>
+          <p class="text-gray-600 max-w-xl mx-auto md:mx-0">
+            Professional physiotherapy, rehabilitation, and wellness services
+            for all ages.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
+          >
+            <button
+              id="bookNow"
+              class="bg-accent text-white px-5 py-3 rounded-lg font-medium shadow hover:opacity-90"
+            >
+              Book Now
+            </button>
+            <a
+              href="#services"
+              class="px-5 py-3 border border-gray-300 rounded-lg text-sm hover:bg-white"
+              >View Services</a
+            >
+          </div>
+        </div>
+        <div class="hero-photo flex items-center justify-center p-4">
+          <div
+            class="w-full max-w-md glass-card p-6 rounded-lg flex items-center gap-4 shadow-md"
+          >
+            <div
+              class="w-24 h-24 rounded-full bg-white/80 flex items-center justify-center text-primary font-bold text-3xl"
+            >
+              👩‍⚕️
+            </div>
+            <div>
+              <div class="font-semibold text-lg">Welcome to BestLife</div>
+              <div class="text-sm text-gray-600">
+                Compassionate care and personalized treatment plans to help you
+                recover and thrive.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-4 md:px-6 mt-12 mb-16 space-y-16">
+      <!-- About -->
+      <section id="about" class="grid md:grid-cols-2 gap-8 items-center">
+        <img
+          src="images/dis.jpg"
+          alt="About"
+          class="w-full h-auto rounded-lg shadow"
+        />
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">About Us</h2>
+          <p class="text-gray-600 mb-4">
+            BestLife Physiotherapy and Wellness Clinic provides high-quality
+            physiotherapy and rehabilitation services. Our compassionate team
+            develops personalized treatment plans to promote recovery and
+            enhance wellbeing.
+          </p>
+          <a
+            href="#"
+            class="inline-block bg-primary text-white px-4 py-2 rounded hover:opacity-90"
+            >Learn More</a
+          >
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <h3
+          class="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left"
+        >
+          Our Services
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="service-card">🏃 Orthopedics & Sports Physiotherapy</div>
+          <div class="service-card">🧠 Neurological Rehabilitation</div>
+          <div class="service-card">💆 Professional Massage Therapy</div>
+          <div class="service-card">⚖️ Weight Management & Fitness</div>
+          <div class="service-card">💙 Caregiver Support Services</div>
+          <div class="service-card">👵 Geriatrics Therapy</div>
+          <div class="service-card">🧒 Pediatric Physiotherapy</div>
+          <div class="service-card">♿ Disability Management</div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-6 bg-white rounded-lg shadow-sm">
+          <h4 class="text-lg font-semibold mb-3">Contact Us</h4>
+          <p class="text-sm text-gray-600">
+            No. 19 Ikot Udoro off Ikot Ekpene Road, Behind NYSC Zonal Office,
+            Uyo<br />
+            No. 38 Utang Street, Uyo, AKS
+          </p>
+          <div class="mt-4 text-sm">
+            <div>📞 08106848856, 08065441356</div>
+            <div class="text-gray-500">Open Mon–Sat</div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-lg shadow-sm">
+          <h4 class="text-lg font-semibold mb-3">Book an Appointment</h4>
+          <form id="bookingForm" class="space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                required
+                name="name"
+                placeholder="Name"
+                class="p-3 border rounded w-full"
+              />
+              <input
+                required
+                name="phone"
+                placeholder="Phone"
+                class="p-3 border rounded w-full"
+              />
+            </div>
+            <textarea
+              name="message"
+              placeholder="Message / Brief history"
+              class="w-full p-3 border rounded"
+              rows="3"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-primary text-white px-4 py-2 rounded hover:opacity-90"
+            >
+              Send Request
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Responsive Google Map -->
+    <div class="w-full flex justify-center">
+      <div
+        class="w-full md:w-3/4 lg:w-2/3 aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.78065392551!2d7.932245929070381!3d5.033653413002808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105d570033b028eb%3A0xe54ef3a9c489ee32!2sBestLife%20Physiotherapy%20and%20wellness%20Clinic%20Uyo!5e0!3m2!1sen!2sng!4v1761574208913!5m2!1sen!2sng"
+          class="w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <br />
+    <!-- FOOTER -->
+    <footer class="bg-white border-t">
+      <div
+        class="max-w-6xl mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600"
+      >
+        <div>© BestLife Physiotherapy & Wellness • All rights reserved</div>
+        <div class="flex gap-3">
+          <a href="#" class="hover:text-primary">Privacy Policy</a>
+          <a href="#" class="hover:text-primary">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
