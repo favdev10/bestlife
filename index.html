@@ -21,7 +21,7 @@
 
   <body class="bg-lightblue text-gray-800 antialiased leading-relaxed">
     <!-- HEADER -->
-    <header class="bg-white shadow-sm sticky top-0 z-40">
+    <header class="relative bg-white shadow-sm sticky top-0 z-40">
       <div
         class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between"
       >
@@ -42,8 +42,8 @@
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-6 text-sm">
           <a href="#" class="hover:text-primary">Home</a>
-          <a href="#about" class="hover:text-primary">About Us</a>
-          <a href="#services" class="hover:text-primary">Services</a>
+          <a href="src/about.html" target="_blank" class="hover:text-primary">About Us</a>
+          <a href="src/services.html" target="_blank" class="hover:text-primary">Services</a>
           <a href="#contact" class="hover:text-primary">Contact</a>
         </nav>
 
@@ -55,7 +55,7 @@
         <!-- CTA Button -->
         <div class="hidden md:block">
           <button
-            id="bookTop"
+            id="bookingForm"
             class="bg-accent text-white px-4 py-2 rounded shadow-sm text-sm hover:brightness-95"
           >
             Book Appointment
@@ -63,36 +63,57 @@
         </div>
       </div>
 
-      <!-- Mobile Nav Menu -->
-      <nav
-        id="mobileMenu"
-        class="hidden flex-col gap-3 mt-2 bg-white border-t shadow-md p-4 md:hidden"
-      >
-        <a href="#" class="hover:text-primary">Home</a>
-        <a href="#about" class="hover:text-primary">About</a>
-        <a href="#services" class="hover:text-primary">Services</a>
-        <a href="#team" class="hover:text-primary">Therapists</a>
-        <a href="#gallery" class="hover:text-primary">Gallery</a>
-        <a href="#contact" class="hover:text-primary">Contact</a>
-        <button
-          id="bookTopMobile"
-          class="mt-3 bg-accent text-white px-4 py-2 rounded shadow-sm text-sm hover:brightness-95"
-        >
-          Book Appointment
-        </button>
-      </nav>
-    </header>
+
+<!-- Mobile Nav Menu -->
+<nav
+  id="mobileMenu"
+  class="hidden flex flex-col items-center text-center gap-3 mt-2 bg-white border-t shadow-md p-4 md:hidden"
+>
+  <a
+    href="#"
+    class="block w-full py-2 px-4 rounded-lg hover:bg-blue-500 hover:text-white active:bg-blue-600 transition-colors duration-200"
+  >
+    Home
+  </a>
+  <a
+    href="#about"
+    class="block w-full py-2 px-4 rounded-lg hover:bg-blue-500 hover:text-white active:bg-blue-600 transition-colors duration-200"
+  >
+    About
+  </a>
+  <a
+    href="src/services.html" target="_blank"
+    class="block w-full py-2 px-4 rounded-lg hover:bg-blue-500 hover:text-white active:bg-blue-600 transition-colors duration-200"
+  >
+    Services
+  </a>
+  <a
+    href="#contact"
+    class="block w-full py-2 px-4 rounded-lg hover:bg-blue-500 hover:text-white active:bg-blue-600 transition-colors duration-200"
+  >
+    Contact
+  </a>
+
+  <button
+    id="bookTopMobile"
+    class="mt-3 bg-accent text-white px-4 py-2 rounded shadow-sm text-sm hover:brightness-95"
+  >
+    <a href="#book">Book Appointment</a>
+  </button>
+</nav>
+
+
 
     <!-- HERO SECTION -->
     <section class="max-w-6xl mx-auto px-4 md:px-6 mt-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div class="space-y-6 text-center md:text-left">
-          <h1
-            class="text-4xl md:text-5xl font-extrabold text-primary leading-tight"
-          >
-            Improving the Quality of Life<br class="hidden md:block" />Through
-            Therapy
-          </h1>
+  
+            <h1 class="text-4xl md:text-5xl font-extrabold text-primary leading-normal">
+  Improving the Quality of Life<br class="hidden md:block" />Through Therapy
+</h1>
+
+
           <p class="text-gray-600 max-w-xl mx-auto md:mx-0">
             Professional physiotherapy, rehabilitation, and wellness services
             for all ages.
@@ -101,13 +122,13 @@
             class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
           >
             <button
-              id="bookNow"
+              id="book"
               class="bg-accent text-white px-5 py-3 rounded-lg font-medium shadow hover:opacity-90"
             >
-              Book Now
+              <a href="#bookingForm">Book Now</a>
             </button>
             <a
-              href="#services"
+              href="src/services.html" target="_blank"
               class="px-5 py-3 border border-gray-300 rounded-lg text-sm hover:bg-white"
               >View Services</a
             >
@@ -139,7 +160,7 @@
       <!-- About -->
       <section id="about" class="grid md:grid-cols-2 gap-8 items-center">
         <img
-          src="images/dis.jpg"
+          src="images/bb.jpg"
           alt="About"
           class="w-full h-auto rounded-lg shadow"
         />
@@ -152,7 +173,7 @@
             enhance wellbeing.
           </p>
           <a
-            href="#"
+           href="src/about.html" target="_blank"
             class="inline-block bg-primary text-white px-4 py-2 rounded hover:opacity-90"
             >Learn More</a
           >
@@ -160,75 +181,47 @@
       </section>
 
       <!-- Services -->
-      <section id="services">
-        <h3
-          class="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left"
-        >
-          Our Services
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="service-card">🏃 Orthopedics & Sports Physiotherapy</div>
-          <div class="service-card">🧠 Neurological Rehabilitation</div>
-          <div class="service-card">💆 Professional Massage Therapy</div>
-          <div class="service-card">⚖️ Weight Management & Fitness</div>
-          <div class="service-card">💙 Caregiver Support Services</div>
-          <div class="service-card">👵 Geriatrics Therapy</div>
-          <div class="service-card">🧒 Pediatric Physiotherapy</div>
-          <div class="service-card">♿ Disability Management</div>
-        </div>
-      </section>
 
-      <!-- Contact -->
-      <section id="contact" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="p-6 bg-white rounded-lg shadow-sm">
-          <h4 class="text-lg font-semibold mb-3">Contact Us</h4>
-          <p class="text-sm text-gray-600">
-            No. 19 Ikot Udoro off Ikot Ekpene Road, Behind NYSC Zonal Office,
-            Uyo<br />
-            No. 38 Utang Street, Uyo, AKS
-          </p>
-          <div class="mt-4 text-sm">
-            <div>📞 08106848856, 08065441356</div>
-            <div class="text-gray-500">Open Mon–Sat</div>
-          </div>
-        </div>
+      <section id="service-videos" class="mt-16">
+  <h3 class="text-2xl font-bold mb-6 text-center text-primary">
+    Our Services in Action
+  </h3>
 
-        <div class="p-6 bg-white rounded-lg shadow-sm">
-          <h4 class="text-lg font-semibold mb-3">Book an Appointment</h4>
-          <form id="bookingForm" class="space-y-3">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <input
-                required
-                name="name"
-                placeholder="Name"
-                class="p-3 border rounded w-full"
-              />
-              <input
-                required
-                name="phone"
-                placeholder="Phone"
-                class="p-3 border rounded w-full"
-              />
-            </div>
-            <textarea
-              name="message"
-              placeholder="Message / Brief history"
-              class="w-full p-3 border rounded"
-              rows="3"
-            ></textarea>
-            <button
-              type="submit"
-              class="bg-primary text-white px-4 py-2 rounded hover:opacity-90"
-            >
-              Send Request
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
+  <!-- Video Slider Container -->
+  <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
+    <!-- Videos Wrapper -->
+    <div id="videoSlider" class="flex transition-transform duration-500 ease-in-out">
 
-    <!-- Responsive Google Map -->
-    <div class="w-full flex justify-center">
+
+      <!-- Video 1 -->
+      <div class="min-w-full">
+        <video
+          src="images/vid0.mp4"
+          class="w-full h-64 md:h-96 object-cover"
+          controls
+        ></video>
+      </div>
+
+    <!-- Navigation Buttons -->
+    <button
+      id="prevVideo"
+      class="absolute top-1/2 left-4 -translate-y-1/2 bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-700 shadow-lg"
+    >
+      ‹
+    </button>
+    <button
+      id="nextVideo"
+      class="absolute top-1/2 right-4 -translate-y-1/2 bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-700 shadow-lg"
+    >
+      ›
+    </button>
+  </div>
+</section>
+
+          <h3 class="text-2xl font-bold mb-6 text-center text-primary">
+    Our Location 📍
+  </h3>
+       <div class="w-full flex justify-center">
       <div
         class="w-full md:w-3/4 lg:w-2/3 aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
       >
@@ -242,6 +235,62 @@
       </div>
     </div>
     <br />
+
+          <h3 class="text-2xl font-bold mb-6 text-center text-primary">
+    Contact Us 📞
+  </h3>
+<form
+  id="bookingForm"
+  action="https://formspree.io/f/maygvbze"
+  method="POST"
+  class="space-y-3"
+>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <input
+      required
+      name="name"
+      placeholder="Name"
+      class="p-3 border rounded w-full"
+    />
+    <input
+      required
+      name="phone"
+      placeholder="Phone"
+      class="p-3 border rounded w-full"
+    />
+  </div>
+
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="Email Address"
+    class="p-3 border rounded w-full"
+  />
+
+  <textarea
+    name="message"
+    placeholder="Message / Brief history"
+    class="w-full p-3 border rounded"
+    rows="3"
+  ></textarea>
+
+  <button
+    type="submit"
+    class="bg-primary text-white px-4 py-2 rounded hover:opacity-90"
+  >
+    Send Request
+  </button>
+</form>
+
+<!-- ✅ Success / Error Message Area -->
+<div id="formMessage" class="mt-4 hidden"></div>
+
+
+    </main>
+
+    <!-- Responsive Google Map -->
+   
     <!-- FOOTER -->
     <footer class="bg-white border-t">
       <div
@@ -251,6 +300,7 @@
         <div class="flex gap-3">
           <a href="#" class="hover:text-primary">Privacy Policy</a>
           <a href="#" class="hover:text-primary">Terms</a>
+           <a href="https://github.com/favdev10" target="_blank" class="hover:text-primary">Developer</a>
         </div>
       </div>
     </footer>
