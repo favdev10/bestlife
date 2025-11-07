@@ -78,3 +78,18 @@ prevVideo.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", updateVideoPosition);
+
+// Appointment form success handler
+document
+  .getElementById("appointmentForm")
+  ?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const successBox = document.getElementById("appointmentSuccess");
+    successBox.classList.remove("hidden");
+
+    setTimeout(() => {
+      successBox.classList.add("hidden");
+      e.target.reset();
+    }, 4000);
+  });

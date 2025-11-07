@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - BestLife Physiotherapy & Wellness</title>
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Appointment Booking Section -->
+    <section id="book" class="py-16 bg-blue-50">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Left: Image / Info -->
+        <div class="flex flex-col items-center md:items-start space-y-6">
+          <img
+            src="../images/logo.png"
+            alt="Physiotherapy session"
+            class="rounded-2xl shadow-lg w-full max-w-md object-cover"
+          />
+          <div>
+            <h2 class="text-3xl font-bold text-primary mb-3">
+              Book Your Appointment
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed max-w-md">
+              Whether it’s pain relief, injury recovery, or general wellness —
+              our experienced physiotherapists are here to help. Book your
+              session today and take the first step towards better health.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Booking Form -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 relative"
+        >
+          <h3 class="text-2xl font-semibold text-primary mb-6">
+            Schedule an Appointment
+          </h3>
+
+          <form id="appointmentForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                required
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              />
+              <input
+                required
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              />
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email (optional)"
+              class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+            />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                required
+                type="date"
+                name="date"
+                class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              />
+              <select
+                required
+                name="service"
+                class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              >
+                <option value="">Select Service</option>
+                <option>Sports Physiotherapy</option>
+                <option>Massage Therapy</option>
+                <option>Neurological Rehab</option>
+                <option>Geriatric Care</option>
+                <option>Pediatric Physiotherapy</option>
+              </select>
+            </div>
+
+            <textarea
+              name="message"
+              placeholder="Additional notes or medical history..."
+              class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              rows="4"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:opacity-90 transition"
+            >
+              Submit Booking
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <div
+            id="appointmentSuccess"
+            class="hidden absolute inset-0 bg-white/90 backdrop-blur-sm flex flex-col items-center justify-center text-center p-6 rounded-2xl"
+          >
+            <i class="fas fa-check-circle text-green-500 text-4xl mb-3"></i>
+            <h4 class="text-lg font-semibold text-gray-800 mb-1">
+              Booking Request Sent!
+            </h4>
+            <p class="text-gray-600 text-sm">
+              Thank you for booking with BestLife. Our team will contact you
+              shortly to confirm your appointment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t">
+      <div
+        class="max-w-6xl mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600"
+      >
+        <div>© BestLife Physiotherapy & Wellness • All rights reserved</div>
+        <div class="flex gap-3">
+          <a href="#" class="hover:text-primary">Privacy Policy</a>
+          <a href="#" class="hover:text-primary">Terms</a>
+          <a
+            href="https://github.com/favdev10"
+            target="_blank"
+            class="hover:text-primary"
+            >Developer</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
